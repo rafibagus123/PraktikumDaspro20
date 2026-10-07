@@ -51,6 +51,10 @@ public class StudiKasus220 {
                 System.out.println("Status: Input tidak valid. Silakan masukkan 'Ya' atau 'Tidak'.");
             }
 
+        }
+
+        else if (jenisKegiatan.equalsIgnoreCase("Lainnya")) {
+            System.out.println("Status: Dana penghargaan tidak diberikan karena jenis kegiatan tidak termasuk dalam kategori yang ditentukan.");
         } else {
             System.out.println("Status: Dana penghargaan tidak diberikan karena jenis kegiatan tidak termasuk dalam kategori yang ditentukan.");
         }
