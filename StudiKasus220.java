@@ -6,6 +6,8 @@ public class StudiKasus220 {
         String namaMahasiswa, jenisKegiatan, lolosPendanaan;
         int jumlahDokumen, peringkatJuara;
 
+        System.out.println("\n============Program Dana Penghargaan Mahasiswa============");
+
         System.out.print("Masukkan nama mahasiswa: ");
         namaMahasiswa = sc.nextLine();
         System.out.print("Jenis kegiatan (BELMAWA, BAKORMA, Mandiri, PKM, atau Lainnya): ");
