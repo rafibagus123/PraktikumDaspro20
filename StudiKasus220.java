@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class StudiKasus220 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String namaMahasiswa, jenisKegiatan;
+        String namaMahasiswa, jenisKegiatan, lolosPendanaan;
         int jumlahDokumen, peringkatJuara;
 
         System.out.print("Masukkan nama mahasiswa: ");
@@ -30,6 +30,28 @@ public class StudiKasus220 {
             } else {
                 System.out.println("Status: Dokumen dan peringkat juara Anda tidak valid");
             }
+        
+        if (jenisKegiatan.equalsIgnoreCase("PKM")) {
+            System.out.println("Apakah tim PKM Anda lolos Pendanaan? (Ya/Tidak)");
+            lolosPendanaan = sc.next();
+            if (lolosPendanaan.equalsIgnoreCase("Ya")) {
+                System.out.print("Masukkan jumlah dokumen (0-4): ");
+                jumlahDokumen = sc.nextInt();
+                if (jumlahDokumen == 4) {
+                System.out.println("Status: Selamat " + namaMahasiswa + "! Anda mendapatkan dana penghargaan dari institusi.");
+                } else if (jumlahDokumen < 4) {
+                System.out.println("Status: Dokumen tidak lengkap, Anda tidak diberi dana penghargaan.");
+            } else if (jumlahDokumen < 0 || jumlahDokumen > 4) {
+                System.out.println("Status: Dokumen Anda tidak valid");
+            }
+
+            } else if (lolosPendanaan.equalsIgnoreCase("Tidak")) {
+                System.out.println("Status: Dana penghargaan tidak diberikan karena tim PKM Anda tidak lolos pendanaan.");
+            } else {
+                System.out.println("Status: Input tidak valid. Silakan masukkan 'Ya' atau 'Tidak'.");
+            }
+
+        }
         }
 
     }
